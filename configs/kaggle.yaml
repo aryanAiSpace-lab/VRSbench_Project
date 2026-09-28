@@ -1,0 +1,15 @@
+paths:
+  train_json: /kaggle/input/vrsbench/clean/train_clean.json
+  val_json: /kaggle/input/vrsbench/clean/val_clean.json
+  references_json: /kaggle/input/vrsbench/clean/references.json
+  train_image_dir: /kaggle/input/vrsbench/images_train/Images_train
+  val_image_dir: /kaggle/input/vrsbench/images_val/Images_val
+  encoder_ckpt: /kaggle/working/checkpoints/RemoteCLIP-ViT-B-32.pt
+  output_root: /kaggle/working/runs
+data:
+  max_caption_len: 110
+  train_subset: null
+  val_subset: null
+train:
+  batch_size: 16
+  num_workers: 4

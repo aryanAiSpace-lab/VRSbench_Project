@@ -1,0 +1,17 @@
+model:
+  encoder_name: remoteclip
+  freeze_encoder: true
+  encoder_unfreeze_last_n: 0
+  decoder_lora: false
+  lora_r: 0
+  lora_alpha: 0
+  lora_dropout: 0.0
+  prefix_len: 10
+train:
+  epochs: 1
+  lr: 0.0005
+  precision: fp32
+  grad_accum_steps: 1
+  grad_checkpointing: false
+  log_every_steps: 10
+  save_every_steps: 100

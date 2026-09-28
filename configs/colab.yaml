@@ -1,0 +1,15 @@
+paths:
+  train_json: /content/drive/MyDrive/VRSbench_Project/data/clean/train_clean.json
+  val_json: /content/drive/MyDrive/VRSbench_Project/data/clean/val_clean.json
+  references_json: /content/drive/MyDrive/VRSbench_Project/data/clean/references.json
+  train_image_dir: /content/drive/MyDrive/VRSbench_Project/data/images_train/Images_train
+  val_image_dir: /content/drive/MyDrive/VRSbench_Project/data/images_val/Images_val
+  encoder_ckpt: /content/drive/MyDrive/VRSbench_Project/checkpoints/RemoteCLIP-ViT-B-32.pt
+  output_root: /content/drive/MyDrive/VRSbench_Project/runs
+data:
+  max_caption_len: 110
+  train_subset: null
+  val_subset: null
+train:
+  batch_size: 8
+  num_workers: 2

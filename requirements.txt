@@ -1,0 +1,11 @@
+torch
+torchvision
+open_clip_torch
+transformers
+peft
+bert-score
+nltk
+pyyaml
+pillow
+tqdm
+huggingface_hub

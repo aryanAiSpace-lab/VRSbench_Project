@@ -1,0 +1,15 @@
+paths:
+  train_json: ./data/VRSBench/clean/train_clean.json
+  val_json: ./data/VRSBench/clean/val_clean.json
+  references_json: ./data/VRSBench/clean/references.json
+  train_image_dir: ./data/VRSBench/images_train/Images_train
+  val_image_dir: ./data/VRSBench/images_val/Images_val
+  encoder_ckpt: ./checkpoints/RemoteCLIP-ViT-B-32.pt
+  output_root: ./runs
+data:
+  max_caption_len: 110   # covers p95 (102) with headroom; GPT-2's 1024 context has plenty of room
+  train_subset: 400
+  val_subset: 80
+train:
+  batch_size: 2
+  num_workers: 2
