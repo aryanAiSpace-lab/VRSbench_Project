@@ -31,13 +31,14 @@ def main():
     multi_refs = json.load(open(refs_path)) if refs_path and os.path.exists(refs_path) else None
 
     image_names, single_refs, hyps = [], [], []
+    from tqdm import tqdm
+
     with torch.no_grad():
-        for batch in loader:
+        for batch in tqdm(loader, desc="Generating captions"):
             preds = model.generate(batch["pixel_values"].to(device), tokenizer)
             hyps.extend(preds)
             single_refs.extend(batch["captions"])
-            image_names.extend(batch["images"])
-
+            image_names.extend(batch["images"])    
     if multi_refs:
         bleu_refs = [[r.split() for r in multi_refs.get(img, [cap])] for img, cap in zip(image_names, single_refs)]
     else:
