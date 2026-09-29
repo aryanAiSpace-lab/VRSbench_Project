@@ -1,9 +1,8 @@
 paths:
-  train_json: /kaggle/input/vrsbench/clean/train_clean.json
-  val_json: /kaggle/input/vrsbench/clean/val_clean.json
-  references_json: /kaggle/input/vrsbench/clean/references.json
-  train_image_dir: /kaggle/input/vrsbench/images_train/Images_train
-  val_image_dir: /kaggle/input/vrsbench/images_val/Images_val
+  train_json: /kaggle/input/datasets/ayaanmustafa/vrs-bench/vrsbench_data/VRSBench_train.json
+  val_json: /kaggle/input/datasets/ayaanmustafa/vrs-bench/vrsbench_data/VRSBench_EVAL_Cap.json
+  train_image_dir: /kaggle/input/datasets/ayaanmustafa/vrs-bench/vrsbench_data/Images_train/Images_train
+  val_image_dir: /kaggle/input/datasets/ayaanmustafa/vrs-bench/vrsbench_data/Images_val/Images_val
   encoder_ckpt: /kaggle/working/checkpoints/RemoteCLIP-ViT-B-32.pt
   output_root: /kaggle/working/runs
 data:
